@@ -5,7 +5,7 @@ class ResConfigSettings(models.TransientModel):
     
     grok_api_key = fields.Char(related='company_id.grok_api_key',
                                readonly=False,
-                               check_company=True,
+                            #    check_company=True,
                                )
     
 
