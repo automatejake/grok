@@ -8,7 +8,8 @@ class SpreadsheetController(http.Controller):
         try:
             api_url = "https://api.x.ai/v1/chat/completions"
             api_key = http.request.env.company.grok_api_key
-            
+            grok_version = http.request.env.company.grok_version
+
             if not api_key:
                 return {'error': 'You need to set your API key in settings'}
 
@@ -24,11 +25,14 @@ class SpreadsheetController(http.Controller):
                 json={
                 "messages": [{
                     "role": "system",
-                    "content": "You are an assistant designed to extract, clean, or find data without any explanation of how you came to a response."
+                    "content": "You are an assistant designed to extract, clean, or find data without any explanation of how you came to a response.  Only provide values as output."
                 },{
                     "role": "user",
                     "content": prompt
-                }]
+                },
+                ],
+                "search_parameters":{"mode":"auto"},
+                "model" : grok_version
             }
             )
             data = response.json()

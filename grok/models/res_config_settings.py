@@ -5,12 +5,13 @@ class ResConfigSettings(models.TransientModel):
     
     grok_api_key = fields.Char(related='company_id.grok_api_key',
                                readonly=False,
-                            #    check_company=True,
                                )
+    grok_version = fields.Selection([('grok-3','Grok 3'),('grok-4','Grok-4')], 
+                                    related='company_id.grok_version')
     
 
 class ResCompany(models.Model):
     _inherit = "res.company"
 
     grok_api_key = fields.Char()
-    
+    grok_version = fields.Selection([('grok-3','Grok 3'),('grok-4','Grok-4')])

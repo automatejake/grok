@@ -16,6 +16,10 @@
                                 <label for="grok_api_key" string="API Key:" class="col-lg-3 o_light_label"/>
                                 <field name="grok_api_key" placeholder="e.g. d7vctmiv2rwgenebha8bxq7irooudn"/>
                             </div>
+                            <div class="row mt16">
+                                <label for="grok_version" string="Grok Version:" class="col-lg-3 o_light_label"/>
+                                <field name="grok_version" default="grok-4"/>
+                            </div>
                         </div>
                     </setting>
                 </block>
