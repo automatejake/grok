@@ -24,7 +24,7 @@ class SpreadsheetController(http.Controller):
                 json={
                 "messages": [{
                     "role": "system",
-                    "content": "You are an assistant designed to filter excel queries without any explanation of how you came to a response."
+                    "content": "You are an assistant designed to extract, clean, or find data without any explanation of how you came to a response."
                 },{
                     "role": "user",
                     "content": prompt
