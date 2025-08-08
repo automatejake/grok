@@ -2,7 +2,7 @@
     'name': 'Grok Spreadsheet Function',
     'version': '1.0',
     'category': 'Productivity',
-    'depends': ['spreadsheet'],
+    'depends': ['spreadsheet','base'],
     'license': 'OPL-1',
     'price': 0,
     'currency': 'USD',
@@ -17,7 +17,7 @@
             (
                 'after',
                 'spreadsheet/static/src/o_spreadsheet/o_spreadsheet.js',
-                'grok_spreadsheets/static/src/**/*.js'
+                'grok/static/src/**/*.js'
             ),
         ],
     },
