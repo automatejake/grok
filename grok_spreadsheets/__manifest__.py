@@ -17,7 +17,7 @@
             (
                 'after',
                 'spreadsheet/static/src/o_spreadsheet/o_spreadsheet.js',
-                'grok_sheets_addon/static/src/**/*.js'
+                'grok_spreadsheets/static/src/**/*.js'
             ),
         ],
     },
