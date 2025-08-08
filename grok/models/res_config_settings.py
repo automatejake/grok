@@ -7,7 +7,8 @@ class ResConfigSettings(models.TransientModel):
                                readonly=False,
                                )
     grok_version = fields.Selection([('grok-3','Grok 3'),('grok-4','Grok-4')], 
-                                    related='company_id.grok_version')
+                                    related='company_id.grok_version',
+                                    readonly=False)
     
 
 class ResCompany(models.Model):
